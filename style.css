@@ -6,6 +6,7 @@
     --header-bg: #0a0a0a;
     --surface: #1a1a1a;
     --text: #e4e1da;
+    --link: #d9c4a0;
     --soft: #bab7b0;
     --muted: #8a8a8a;
     --brand: antiquewhite;
@@ -19,6 +20,7 @@
     --header-bg: #f3ebc9;
     --surface: #ebddc5;
     --text: #22344a;
+    --link: #3b6a8f;
     --soft: #34495e;
     --muted: #4d6478;
     --brand: #22344a;
@@ -57,6 +59,15 @@ a {
     text-decoration: none;
     color: inherit;
     transition: color 0.15s;
+}
+
+.text-link {
+    color: var(--link);
+    text-underline-offset: 3px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
 }
 
 /* HEADER */
@@ -190,6 +201,10 @@ hr {
     font-weight: 400;
     font-size: 16px;
     margin: 0;
+}
+
+.body-text + .body-text {
+    margin-top: 12px;
 }
 
 .paragraph-text {
@@ -369,14 +384,30 @@ hr {
     color: var(--soft);
 }
 
+.project-meta {
+    display: grid;
+    align-content: start;
+    gap: 24px;
+}
+
+.project-meta .tag-list {
+    justify-content: flex-end;
+}
+
 @media (max-width: 700px) {
     .two-col {
         grid-template-columns: 1fr;
         gap: 32px;
     }
+
+    .project-meta .tag-list {
+        justify-content: flex-start;
+    }
 }
 
 .showcase {
+    display: grid;
+    gap: 16px;
     padding-bottom: 48px;
 }
 
