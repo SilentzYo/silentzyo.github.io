@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schoology Post Remover | Hayden Leung</title>
     <meta name="title" content="Schoology Post Remover - Chrome Extension">
-    <meta name="description" content="A Chrome extension that removes unwanted posts from the Schoology Recent Activity feed.">
+    <meta name="description" content="A Chrome extension that automatically hides posts from chosen people in the Schoology Recent Activity feed.">
     <link rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
@@ -26,7 +26,8 @@
 
     <section class="body">
         <div class="about">
-            <p class="body-text">A Manifest V3 Chrome extension that cleans up the Schoology Recent Activity feed. Clicking Remove in the popup injects a script into the active tab with the Chrome scripting API. The script expands the feed with the "More" button, removes posts from a list of accounts I didn't need updates from, and scrolls back to the top.</p>
+            <p class="body-text">A Chrome extension that hides posts from chosen people in the Schoology Recent Activity feed. You list their names in a text file, one per line. A background service worker reads the list and passes it to a content script that runs on every Schoology page, which removes any post whose author is on it, ignoring capitalization and extra spaces.</p>
+            <p class="body-text">The first version was a popup with a Remove button that ran a one-time cleanup against a hard-coded list of names. The current version runs on its own: it clicks "More" once to load older posts, and a MutationObserver removes matching posts as new ones appear. With the names moved into a file, anyone can load the extension and use their own list, and schools on a custom Schoology domain can add it to the manifest.</p>
             <p class="body-text"><a class="text-link" href="https://github.com/SilentzYo/Schoology-Post-Remover">View on GitHub</a></p>
         </div>
         <div class="experiences project-meta">
@@ -34,7 +35,6 @@
                 <h2 class="section-label">Languages</h2>
                 <ul class="tag-list">
                     <li>JavaScript</li>
-                    <li>HTML</li>
                 </ul>
             </div>
             <div>
@@ -42,13 +42,15 @@
                 <ul class="tag-list">
                     <li>Chrome Extensions API</li>
                     <li>Manifest V3</li>
+                    <li>MutationObserver</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <main class="showcase">
-        <img class="image" src="../media/schoology-popup.png" alt="Source code of the Schoology Post Remover extension popup">
+        <img class="image" src="../media/schoology-feed.png" alt="Schoology Recent Activity feed with one post blanked out">
+        <img class="image" src="../media/schoology-content.png" alt="Source code of the Schoology Post Remover content script">
     </main>
 
     <footer>
