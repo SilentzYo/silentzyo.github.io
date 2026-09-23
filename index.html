@@ -5,91 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hayden Leung</title>
     <meta name="title" content="Hayden Leung">
-    <meta name="description" content="Hayden Leung's personal website.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hayden Leung, UC Berkeley freshman. Projects, writing, and other things I've built.">
     <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
 </head>
 <body>
-    <div id="__next">
-        <div class="header">
-            <div class="header-object header-first">Hayden Leung</div>
-            <div class="header-object header-middle"><a href="pages/otherstuff.html">Other Stuff I've Done</a></div> 
-            <div class="header-object header-last">Contact</div>
-        </div>
-        <hr>
-        <div class="body">
-            <div class="about">
-                <h1>ABOUT</h1>
-                <p class="body-text">Hayden is a third-year high school student who is passionate about computer science. After taking Computer Science Capstone, the highest computer science course at Gunn High School, he began to do more projects. He also plays the trumpet and is in the high school's Big Band H and Wind Ensemble, both require audition and are the highest level bands in jazz and concert bands respectively.</p>
-            </div>
-            <div class="experiences">
-                <h1>EXPERIENCES</h1>
-                <p class="body-text">Competitive Progamming Club Member&emsp;<b>2022-2026</b><br>
-                    Japanese Culture Club VP&emsp;<b>2024-2025</b><br>
-                    Japanese Culture Club Member&emsp;<b>2022-2026</b><br>
-                </p>
-            </div>
-        </div>
-        <hr class="invisible">
-        <div class="main">
-            <!--Competitive Programming-->
-            <a target class="project" href="https://www.youtube.com/">
-                <div class="">
-                    <img class="image" src="media/test.jpg" alt="test image">
-                </div>
-                <div class="title">
-                    <h1>Elephant</h1>
-                    <h2>This is an Elephant</h2>
-                </div>
-            </a>
+    <header class="header">
+        <a class="header-object header-first" href="index.html">Hayden Leung</a>
+        <nav class="nav">
+            <a href="index.html" aria-current="page">Projects</a>
+            <a href="https://github.com/SilentzYo">GitHub</a>
+            <a href="mailto:hellohaydenleung@gmail.com">Contact</a>
+        </nav>
+    </header>
+    <hr>
 
-            <!--Creative Writing-->
-            <a target class="project" href="pages/crwrit.html">
-                <div class="">
-                    <img class="image" src="media/writcr.png" alt="creative writing image">
-                </div>
+    <section class="body">
+        <div class="about">
+            <h1>About</h1>
+            <p class="body-text">I'm a freshman at Berkeley studying Mathematics and Computer Science. I've also played trumpet in Henry M. Gunn High School's Big Band H, Wind Ensemble, and Symphony Orchestra H, as well as the Stanford Wind Symphony.</p>
+        </div>
+        <div class="experiences">
+            <table class="highlights-table body-text">
+                <thead>
+                    <tr><th class="highlights-heading" scope="col">Highlights</th><td></td></tr>
+                </thead>
+                <tbody>
+                    <tr><th>USACO</th><td>Gold</td></tr>
+                    <tr><th>Codeforces</th><td>Specialist (1400+)</td></tr>
+                    <tr><th>AIME</th><td>Qualifier</td></tr>
+                    <tr><th>Japanese</th><td>JLPT N2</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <main class="projects-grid">
+        <div class="projects-column">
+            <a class="project" href="pages/crwrit.html">
+                <img class="image" src="media/writcr.png" alt="Creative writing portfolio cover">
                 <div class="title">
                     <h1>Creative Writing Portfolio</h1>
                     <h2>Spring 2025</h2>
                 </div>
             </a>
-        
-            <!--Manga Translator-->
-            <a target class="project" href="pages/mangajisho.html">
-                <div class="">
-                    <img class="image" src="media/manga-translate.png" alt="manga translate image">
-                </div>
+        </div>
+
+        <div class="projects-column">
+            <a class="project" href="pages/mangajisho.html">
+                <img class="image" src="media/manga-translate.png" alt="Manga Jisho translating a manga page">
                 <div class="title">
                     <h1>Manga Jisho</h1>
                     <h2>Translator and Dictionary</h2>
                 </div>
             </a>
-        
-            <!--Parking-->
-            <a target class="project" href="pages/parking.html">
-                <div class="">
-                    <img class="image" src="media/gunnparkinglot.jpg" alt="parking lot">
-                </div>
+        </div>
+
+        <div class="projects-column">
+            <a class="project" href="pages/parking.html">
+                <img class="image" src="media/gunnparkinglot.jpg" alt="Gunn High School parking lot">
                 <div class="title">
                     <h1>Parking</h1>
                     <h2>Open Spots in Parking Lots</h2>
                 </div>
             </a>
         </div>
-        
-        <hr class="invisible">
-        
-        <footer>
-            <div class="footer-object footer-first">Hayden Leung</div>
-            <div class="footer-object footer-two">Stuff I've Done</div> 
-            <div class="footer-object footer-three">P</div>
-            <div class="footer-object footer-four">E</div>
-            <div class="footer-object footer-five">N</div>
-            <div class="footer-object footer-last">Contact</div>
-        </footer>
-    </div>
+    </main>
+
+    <section class="section two-col">
+        <div>
+            <h1 class="section-label">Education</h1>
+            <p class="body-text"><span class="entry-role">UC Berkeley</span> <span class="entry-org">Class of 2030</span></p>
+            <ul class="tag-list">
+                <li>Multivariable Calculus</li>
+                <li>Linear Algebra &amp; Differential Equations</li>
+                <li>Discrete Mathematics</li>
+                <li>Structure and Interpretation of Computer Programs</li>
+            </ul>
+        </div>
+        <div>
+            <h1 class="section-label">Skills</h1>
+            <ul class="tag-list">
+                <li>C/C++</li>
+                <li>C#</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>OpenCV</li>
+                <li>Tesseract OCR</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-object">&copy; 2026 Hayden Leung</div>
+        <div class="footer-object footer-links">
+            <a href="https://github.com/SilentzYo">GitHub</a>
+            <a href="mailto:hellohaydenleung@gmail.com">Contact</a>
+        </div>
+    </footer>
 </body>
 </html>

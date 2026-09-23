@@ -3,48 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manga Jisho</title>
-    <meta name="title" content="Manga Jisho - Your Go-To Dictionary for Manga Terms">
-    <meta name="description" content="Manga Jisho is your go-to dictionary for manga terms.">
+    <title>Manga Jisho | Hayden Leung</title>
+    <meta name="title" content="Manga Jisho - Manga Translator and Dictionary">
+    <meta name="description" content="Manga Jisho is an OCR-based Japanese translation pipeline built with Python, Tesseract OCR, and OpenCV.">
     <link rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
     <link rel="stylesheet" href="../style.css">
+    <script src="../theme.js"></script>
 </head>
 <body>
-    <div id="__next">
-        <div class="header">
-            <div class="header-object header-first">Hayden Leung</div>
-            <div class="header-object header-middle">Dictionary</div> 
-            <div class="header-object header-last">Contact</div>
+    <header class="header header-centered">
+        <a class="header-object header-first" href="../index.html">Hayden Leung</a>
+        <h1 class="header-title">Manga Jisho</h1>
+        <nav class="nav">
+            <a href="../index.html">Projects</a>
+            <a href="https://github.com/SilentzYo">GitHub</a>
+            <a href="mailto:hellohaydenleung@gmail.com">Contact</a>
+        </nav>
+    </header>
+    <hr>
+
+    <section class="body">
+        <div class="about">
+            <p class="body-text">Manga Jisho is an OCR-based Japanese translation pipeline built with Python, Tesseract OCR, and OpenCV. It extracts Japanese text from images with 95% accuracy and translates it while preserving meaning, about 15% faster than alternatives.</p>
         </div>
-        <hr>
-        <div class="body">
-            <div class="about">
-                <h1>ABOUT</h1>
-                <p class="body-text about-text">Manga Jisho is your go-to dictionary for manga terms. Find translations and explanations for various manga-related terms.</p>
-            </div>
+    </section>
+
+    <main class="showcase">
+        <img class="image" src="../media/manga-translate.png" alt="Manga Jisho translating a manga page">
+    </main>
+
+    <footer>
+        <div class="footer-object">&copy; 2026 Hayden Leung</div>
+        <div class="footer-object footer-links">
+            <a href="../index.html">Projects</a>
+            <a href="https://github.com/SilentzYo">GitHub</a>
+            <a href="mailto:hellohaydenleung@gmail.com">Contact</a>
         </div>
-        <hr class="invisible">
-        <div class="main">
-            <div class="column">
-                <!-- Example Entry -->
-                <a target class="project">
-                    <div class="">
-                        <img src="media/example.jpg" alt="example image">
-                    </div>
-                    <div class="title">
-                        <h1>Example Term</h1>
-                        <h2>Translation and Explanation</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <footer>
-            <div class="footer-object footer-first">Manga Jisho</div>
-            <div class="footer-object footer-two">Dictionary</div> 
-            <div class="footer-object footer-last">Contact</div>
-        </footer>
-    </div>
+    </footer>
 </body>
 </html>
