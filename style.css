@@ -47,14 +47,6 @@ body {
     padding: 0 16px;
 }
 
-/* FONTS */
-
-.eb-garamond {
-    font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -214,14 +206,6 @@ hr {
     margin-top: 12px;
 }
 
-.paragraph-text {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 5%;
-    tab-size: 3;
-    line-height: 200%;
-}
-
 .about {
     text-align: left;
 }
@@ -264,14 +248,6 @@ hr {
     padding-bottom: 48px;
 }
 
-.piece {
-    flex-direction: column;
-    cursor: pointer;
-    gap: 1.3rem;
-    display: inline-block;
-    flex-grow: 1;
-}
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -285,9 +261,20 @@ hr {
     gap: 24px;
 }
 
+.pieces-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 16px;
+    padding-bottom: 48px;
+}
+
 @media (max-width: 700px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .pieces-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -528,24 +515,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.footer-light-green {
-    background-color: lightgreen;
-}
-
-/* COLORS */
-
-.sky-blue {
-    background-color: #769fb0;
-}
-
-.light-grey {
-    background-color: rgba(211, 211, 211, 0.674);
-}
-
-.light-green {
-    background-color: lightgreen;
 }
 
 .pixelated {

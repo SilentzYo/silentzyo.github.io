@@ -1,0 +1,365 @@
+.piece .header,
+.piece footer {
+    position: relative;
+    z-index: 10;
+}
+
+.piece footer {
+    background: var(--header-bg);
+    box-shadow: 0 0 0 100vmax var(--header-bg);
+    clip-path: inset(0 -100vmax);
+    border-top: none;
+}
+
+.scene {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.piece-main {
+    position: relative;
+    padding: 56px 0 72px;
+}
+
+.piece-card {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.piece-text {
+    color: var(--piece-ink);
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+.piece-text p {
+    margin: 0;
+    text-indent: 2em;
+}
+
+.piece-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px 24px;
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--piece-rule);
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.piece-nav a {
+    color: var(--piece-link);
+    text-underline-offset: 4px;
+}
+
+.piece-nav a:hover {
+    text-decoration: underline;
+}
+
+.piece-nav a:last-child {
+    margin-left: auto;
+    text-align: right;
+}
+
+@media (max-width: 700px) {
+    .piece-main {
+        padding: 32px 0 48px;
+    }
+
+    .piece-text {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+}
+
+.piece-stage {
+    --piece-ink: #eadcc6;
+    --piece-link: #e6c27a;
+    --piece-rule: rgba(234, 220, 198, 0.18);
+    --pixel: 5px;
+}
+
+.piece-stage .scene {
+    background: #0e0906;
+}
+
+.piece-stage .scene canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    image-rendering: pixelated;
+}
+
+.stage-motes i {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: var(--pixel);
+    height: var(--pixel);
+    background: rgba(255, 240, 214, 0.75);
+    animation: mote var(--d) ease-in-out var(--delay) infinite alternate;
+}
+
+@keyframes mote {
+    from {
+        transform: translate(0, 0);
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translate(var(--dx), -40px);
+        opacity: 0.2;
+    }
+}
+
+.pixel-strip {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    overflow: hidden;
+}
+
+.pixel-strip canvas {
+    display: block;
+    image-rendering: pixelated;
+}
+
+.stage-band {
+    margin-top: 64px;
+}
+
+.piece-stage .piece-main {
+    padding-top: 24px;
+}
+
+.piece-stage .piece-card {
+    max-width: 720px;
+}
+
+.piece-stage .piece-text p + p {
+    margin-top: 0.5em;
+}
+
+@media (max-width: 700px) {
+    .piece-stage {
+        --pixel: 3px;
+    }
+
+    .piece-stage .piece-card {
+        padding: 0 4px;
+    }
+
+    .stage-band {
+        margin-top: 48px;
+    }
+}
+
+.piece-meadow {
+    --piece-ink: #24301f;
+    --piece-link: #2e6b35;
+    --piece-rule: rgba(36, 48, 31, 0.15);
+    --pixel: 5px;
+}
+
+.piece-meadow .scene {
+    background: #d4eaf7;
+}
+
+.meadow-canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    image-rendering: pixelated;
+}
+
+@media (max-width: 700px) {
+    .piece-meadow {
+        --pixel: 3px;
+    }
+}
+
+.piece-meadow .piece-main {
+    padding-top: max(56px, calc(100vh - 280px));
+    padding-top: max(56px, calc(100svh - 280px));
+}
+
+.piece-meadow .piece-card {
+    max-width: 760px;
+    padding: 56px clamp(24px, 6vw, 64px) 40px;
+    background: rgba(255, 253, 246, 0.94);
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(34, 76, 40, 0.2);
+}
+
+.epigraph {
+    margin: 0 0 2.4em;
+    text-align: center;
+}
+
+.piece-text .epigraph p {
+    text-indent: 0;
+}
+
+.epigraph-quote {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.epigraph-source {
+    margin-top: 0.3em;
+    font-size: 0.9em;
+    letter-spacing: 0.04em;
+}
+
+.piece-text .epigraph-translation {
+    margin-top: 0.9em;
+    color: rgba(36, 48, 31, 0.7);
+    font-size: 0.85em;
+}
+
+.piece-sakura {
+    --piece-ink: #3b2a33;
+    --piece-link: #b4466c;
+    --piece-rule: rgba(180, 70, 108, 0.2);
+    --pixel: 5px;
+    --scene-top: 72px;
+}
+
+.piece-sakura .scene {
+    background: linear-gradient(to bottom, #c9e3f5 0%, #e9eaf4 45%, #f9e4ec 80%, #fbdbe6 100%);
+}
+
+.branch {
+    position: absolute;
+    top: var(--scene-top);
+    z-index: 2;
+    width: calc(64 * var(--pixel));
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.branch-left {
+    left: 0;
+}
+
+.branch-right {
+    right: 0;
+}
+
+.pixel-band {
+    position: absolute;
+    left: 0;
+    image-rendering: pixelated;
+}
+
+.lanterns {
+    top: var(--scene-top);
+    z-index: 1;
+}
+
+.river {
+    bottom: 0;
+}
+
+.petal-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+.petal-layer-front {
+    position: fixed;
+    z-index: 8;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.petal {
+    position: absolute;
+    top: -40px;
+    left: var(--x);
+    animation: petal-fall var(--fall) linear var(--delay) infinite;
+}
+
+.petal img {
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    image-rendering: pixelated;
+    animation: petal-sway var(--sway) ease-in-out var(--delay) infinite alternate;
+}
+
+@keyframes petal-fall {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    6%,
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--drift), calc(100vh + 80px));
+        opacity: 0;
+    }
+}
+
+@keyframes petal-sway {
+    from {
+        transform: translateX(-14px);
+    }
+
+    to {
+        transform: translateX(14px);
+    }
+}
+
+.piece-sakura .piece-main {
+    padding-top: calc(16 * var(--pixel) + 40px);
+}
+
+.piece-sakura .piece-card {
+    max-width: 680px;
+    padding: 56px clamp(20px, 6vw, 56px) 36px;
+    background: rgba(255, 251, 247, 0.9);
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(170, 90, 120, 0.2);
+}
+
+.poem {
+    text-align: center;
+}
+
+.piece-text.poem p {
+    margin: 0 0 1.7em;
+    text-indent: 0;
+}
+
+.piece-text.poem p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .piece-sakura {
+        --pixel: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stage-motes i {
+        animation: none;
+    }
+}
