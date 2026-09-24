@@ -96,6 +96,7 @@ a {
 .header-first {
     font-weight: 500;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .header-centered {
@@ -132,6 +133,12 @@ a {
     align-items: center;
     gap: 20px;
     font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .nav {
+        gap: 16px;
+    }
 }
 
 .nav a,
@@ -413,6 +420,88 @@ hr {
     max-height: 70vh;
     object-fit: contain;
     background: var(--surface);
+}
+
+/* RESUME */
+
+.resume {
+    padding: 24px 0 48px;
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    text-align: center;
+}
+
+.resume-hint {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    transition: opacity 3s ease-out;
+}
+
+.resume-hint.is-faded {
+    opacity: 0;
+}
+
+.hint-touch {
+    display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .hint-mouse {
+        display: none;
+    }
+
+    .hint-touch {
+        display: inline;
+    }
+}
+
+.resume-stage {
+    position: relative;
+    height: calc(100vh - 180px);
+    height: calc(100svh - 180px);
+    min-height: 420px;
+    max-height: 1000px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.resume-stage canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+:root[data-theme="light"] .resume-stage canvas {
+    filter: drop-shadow(0 10px 24px rgba(34, 52, 74, 0.16));
+}
+
+.resume-stage.is-flat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-flat {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 0 1px var(--line);
+}
+
+.resume-error {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .resume-stage {
+        height: auto;
+        min-height: 0;
+        max-height: 70svh;
+        aspect-ratio: 3 / 4;
+    }
 }
 
 /* FOOTER */

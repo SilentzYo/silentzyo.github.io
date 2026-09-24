@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Hayden Leung</title>
+    <meta name="title" content="Resume - Hayden Leung">
+    <meta name="description" content="Hayden Leung's resume.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../theme.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/",
+            "pdfjs-dist": "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.3.289/build/pdf.min.mjs"
+        }
+    }
+    </script>
+    <script type="module" src="resume.js"></script>
+</head>
+<body>
+    <header class="header header-centered">
+        <a class="header-object header-first" href="../index.html">Hayden Leung</a>
+        <h1 class="header-title">Resume</h1>
+        <nav class="nav">
+            <a href="../index.html">Projects</a>
+            <a href="resume.html" aria-current="page">Resume</a>
+            <a href="https://github.com/SilentzYo">GitHub</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main class="resume">
+        <p class="resume-hint" id="resume-hint">
+            Drag the paper to rotate<br>
+            <span class="hint-mouse">Scroll to zoom</span><span class="hint-touch">Pinch to zoom</span>
+        </p>
+        <div class="resume-stage" id="resume-stage"></div>
+        <script>
+            if (location.protocol === 'file:') {
+                document.getElementById('resume-hint').hidden = true;
+                var stage = document.getElementById('resume-stage');
+                stage.classList.add('is-flat');
+                stage.innerHTML = '<p class="resume-error">Could not be loaded</p>';
+            }
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-object">&copy; 2026 Hayden Leung</div>
+        <div class="footer-object footer-links">
+            <a href="../index.html">Projects</a>
+            <a href="https://github.com/SilentzYo">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
