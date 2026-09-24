@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parking | Hayden Leung</title>
     <meta name="title" content="Parking - Open Spots in Parking Lots">
-    <meta name="description" content="A tool that shows open spots in the Gunn High School parking lots.">
+    <meta name="description" content="Finds open parking spots from a camera using YOLO car detection and hand-marked spots.">
     <link rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
@@ -26,8 +26,25 @@
 
     <section class="body">
         <div class="about">
-            <p class="body-text">Parking shows which spots are open in the Gunn parking lots.</p>
+            <p class="body-text">Parking finds open spots in a parking lot from a camera. You mark where the spots are once by clicking the corners of each row, and it splits the row into individual spots. A YOLO model then detects the cars, and any spot without a car in it counts as free.</p>
+            <p class="body-text">It runs on a photo, a video, a webcam, or an RTSP stream, and can write each spot's status to a JSON file. For lots where the cars are small in the frame, it tiles the image so the detector can still pick them out.</p>
             <p class="body-text"><a class="text-link" href="https://github.com/SilentzYo/parking-lot">View on GitHub</a></p>
+        </div>
+        <div class="experiences project-meta">
+            <div>
+                <h2 class="section-label">Languages</h2>
+                <ul class="tag-list">
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="section-label">Tools</h2>
+                <ul class="tag-list">
+                    <li>YOLO</li>
+                    <li>OpenCV</li>
+                    <li>NumPy</li>
+                </ul>
+            </div>
         </div>
     </section>
 
