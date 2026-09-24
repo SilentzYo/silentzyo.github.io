@@ -223,36 +223,14 @@ hr {
     text-align: right;
 }
 
-.highlights-table {
-    border-collapse: collapse;
-    margin-left: auto;
+.contact-links {
+    list-style: none;
+    padding: 0;
 }
 
-.highlights-table th,
-.highlights-table td {
-    font-weight: 400;
+.contact-links li {
     padding: 2px 0;
-    white-space: nowrap;
-}
-
-.highlights-table th {
-    color: var(--text);
-    text-align: right;
-    padding-right: 12px;
-}
-
-.highlights-table td {
-    color: var(--muted);
-    text-align: left;
-}
-
-.highlights-table .highlights-heading {
-    color: var(--muted);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0 calc(12px - 0.12em) 8px 0;
+    overflow-wrap: anywhere;
 }
 
 .invisible {
@@ -267,10 +245,6 @@ hr {
 
     .experiences {
         text-align: left;
-    }
-
-    .highlights-table {
-        margin-left: 0;
     }
 }
 
@@ -382,6 +356,30 @@ hr {
     padding: 2px 12px;
     font-size: 13px;
     color: var(--soft);
+}
+
+.tag-list + .section-label {
+    margin-top: 40px;
+}
+
+.highlights-table {
+    border-collapse: collapse;
+}
+
+.highlights-table th,
+.highlights-table td {
+    font-weight: 400;
+    padding: 2px 0;
+    text-align: left;
+}
+
+.highlights-table th {
+    color: var(--text);
+    padding-right: 16px;
+}
+
+.highlights-table td {
+    color: var(--muted);
 }
 
 .project-meta {
