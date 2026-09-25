@@ -379,10 +379,17 @@ hr {
 
 .embed {
     display: block;
-    width: 100%;
+    justify-self: center;
+    width: calc(100% * 2 / 3);
     height: min(70vh, 680px);
     border: 1px solid var(--line);
     background: var(--surface);
+}
+
+@media (max-width: 700px) {
+    .embed {
+        width: 100%;
+    }
 }
 
 /* RESUME */
