@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manga Jisho | Hayden Leung</title>
     <meta name="title" content="Manga Jisho - Manga Translator and Dictionary">
-    <meta name="description" content="Manga Jisho is an OCR-based Japanese translation pipeline built with Python, Tesseract OCR, and OpenCV.">
+    <meta name="description" content="Manga Jisho is a Chrome extension and Python server for reading raw Japanese manga, with hover dictionary lookups and in-page English translation.">
     <link rel="apple-touch-icon" sizes="180x180" href="../media/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
@@ -35,20 +35,27 @@
 
     <section class="body">
         <div class="about">
-            <p class="body-text">Manga Jisho is an OCR-based Japanese translation pipeline built with Python, Tesseract OCR, and OpenCV. It extracts Japanese text from images with 95% accuracy and translates it while preserving meaning, about 15% faster than alternatives.</p>
+            <p class="body-text">Manga Jisho is a Chrome extension and local Python server for reading Japanese manga in the browser. It detects manga pages on any site, reads their text with mokuro and manga-ocr, and works a couple of pages ahead to allow continuous reading once started. Holding Shift and hovering over a word shows its JMdict definitions in a side panel. Text is split into words with fugashi, then neighbouring words are joined and conjugated forms are matched to their dictionary form; ex. 食べなかった still finds 食べる.</p>
+            <p class="body-text">Page translation replaces the Japanese with English right on the page. OpenCV erases the original text, using a flat fill on plain bubbles. A flood fill traces each speech bubble, DeepL translates every bubble with the rest of the page as context, and the English is sized and wrapped to fit inside the bubble's shape. A quantized version of the OCR model trades a little accuracy for speed on slower machines.</p>
+            <p class="body-text"><a class="text-link" href="https://github.com/SilentzYo/manga-jisho">View on GitHub</a></p>
         </div>
         <div class="experiences project-meta">
             <div>
                 <h2 class="section-label">Languages</h2>
                 <ul class="tag-list">
                     <li>Python</li>
+                    <li>JavaScript</li>
                 </ul>
             </div>
             <div>
                 <h2 class="section-label">Tools</h2>
                 <ul class="tag-list">
-                    <li>Tesseract OCR</li>
+                    <li>manga-ocr</li>
                     <li>OpenCV</li>
+                    <li>PyTorch</li>
+                    <li>FastAPI</li>
+                    <li>DeepL API</li>
+                    <li>SQLite</li>
                 </ul>
             </div>
         </div>
